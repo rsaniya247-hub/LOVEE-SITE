@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Baby ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5,#fff6fa);
+overflow:hidden;
+}
+
+/* Page system */
+.page{
+display:none;
+min-height:100vh;
+padding:20px;
+animation:fade 0.6s ease;
+}
+
+.show{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* BIG TEXT */
+h1{
+font-size:9vw;      /* Responsive big heading */
+color:#ff2e7a;
+margin-bottom:20px;
+}
+
+p{
+font-size:5.5vw;    /* Bigger paragraph text */
+line-height:1.6;
+color:#444;
+max-width:95%;
+margin-bottom:25px;
+}
+
+/* BIG PREMIUM BUTTONS */
+button{
+padding:18px 40px;
+font-size:5vw;
+border:none;
+border-radius:50px;
+background:linear-gradient(45deg,#ff4d88,#ff80aa);
+color:white;
+cursor:pointer;
+margin:12px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(255,77,136,0.4);
+transition:all 0.3s ease;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+/* BIG IMAGES FOR PHONE */
+img{
+display:block;
+margin:25px auto;
+width:85vw;          /* Takes 85% of phone width */
+max-width:600px;     /* Looks good on laptop too */
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Floating hearts */
+.heart{
+position:fixed;
+font-size:24px;
+animation:fall 3s linear forwards;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px);}
+100%{transform:translateY(100vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="page show" id="intro">
+<img src="AS.gif">
+</div>
+
+<!-- START -->
+<div class="page" id="start">
+<h1>Hey Baby 😼❤️</h1>
+<img src="Gif.gif">
+<p>I made something special for you…</p>
+<button onclick="go('game1')">Open It 💌</button>
+</div>
+
+<!-- GAME 1 -->
+<div class="page" id="game1">
+<h1>Choose One 😏</h1>
+<img src="Gif.gif">
+<button onclick="go('game2')">I Love You</button>
+<button onclick="go('game2')">I Love You More</button>
+</div>
+
+<!-- GAME 2 -->
+<div class="page" id="game2">
+<h1>Pick Your Destiny 💕</h1>
+<img src="Gif.gif">
+<button onclick="go('stuck')">Forever</button>
+<button onclick="go('stuck')">Always</button>
+</div>
+
+<!-- STUCK -->
+<div class="page" id="stuck">
+<h1>You’re Stuck With Me 😼</h1>
+<img src="catgun.jpg">
+<p>No escape now 😌</p>
+<button onclick="go('msg1')">Continue ➜</button>
+</div>
+
+<!-- MESSAGE 1 -->
+<div class="page" id="msg1">
+<p><b>I LOVE YOU MY CUTUU BABYY ❤️💗</b></p>
+<img src="couplecats.jpg">
+<button onclick="go('msg2')">Next ➜</button>
+</div>
+
+<!-- MESSAGE 2 -->
+<div class="page" id="msg2">
+<p>
+I don’t even know how to explain how much I love you…  
+It’s like my heart feels calm when it’s you 🥺❤️✨
+</p>
+<img src="Cute.gif">
+<button onclick="go('msg3')">Next ➜</button>
+</div>
+
+<!-- MESSAGE 3 -->
+<div class="page" id="msg3">
+<p>
+You’re my peace, my happiness, my sukoon 🤍🌙  
+Out of everyone… I still choose you.
+</p>
+<img src="Rose.gif">
+<button onclick="go('msg4')">Next ➜</button>
+</div>
+
+<!-- MESSAGE 4 -->
+<div class="page" id="msg4">
+<p>
+I know I fight a lot… but even when I’m mad,  
+it’s still you I want 🥺❤️
+</p>
+<img src="iloveyou.gif">
+<button onclick="go('msg5')">Next ➜</button>
+</div>
+
+<!-- MESSAGE 5 -->
+<div class="page" id="msg5">
+<p>
+You are my comfort. My safe place.  
+My favorite notification 💌  
+And I’m completely yours.
+</p>
+<img src="Cat.jpeg">
+<button onclick="go('game3')">Okay Fine ➜</button>
+</div>
+
+<!-- GAME 3 -->
+<div class="page" id="game3">
+<h1>Pick Our Date 😏</h1>
+<img src="Gif.gif">
+<button onclick="go('movie')">Movie Night 🎬</button>
+<button onclick="go('adventure')">Adventure 🏞️</button>
+<button onclick="go('playgame')">Love Game 🎮</button>
+</div>
+
+<!-- MOVIE -->
+<div class="page" id="movie">
+<h1>Movie Night 🍿</h1>
+<img src="Gif.gif">
+<p>Blanket. Snacks. Just us.</p>
+<button onclick="go('finalChoice')">Continue ➜</button>
+</div>
+
+<!-- ADVENTURE -->
+<div class="page" id="adventure">
+<h1>Dream Adventure 🏞️</h1>
+<img src="Gif.gif">
+<p>Sunset sky. Holding hands.</p>
+<button onclick="go('finalChoice')">Continue ➜</button>
+</div>
+
+<!-- PLAY GAME -->
+<div class="page" id="playgame">
+<h1>Who Loves More? 😼</h1>
+<img src="Gif.gif">
+<button onclick="alert('Wrong 😏 I love you more ❤️')">You</button>
+<button onclick="alert('Correct 😌 But I still win ❤️')">Me</button>
+<button onclick="go('finalChoice')">Continue ➜</button>
+</div>
+
+<!-- FINAL -->
+<div class="page" id="finalChoice">
+<h1>Choose Your Reward 😏</h1>
+<img src="Hehe.gif">
+<button onclick="ending()">Hug 🤍</button>
+<button onclick="ending()">Kiss 💋</button>
+<button onclick="ending()">Forever ♾️</button>
+</div>
+
+<!-- ENDING -->
+<div class="page" id="ending">
+<h1 id="endText"></h1>
+<img src="Img.jpg">
+<img src="Miss.gif">
+<p>Love you forever ❤️✨</p>
+</div>
+
+<script>
+setTimeout(function(){
+go('start');
+},2500);
+
+function go(id){
+document.querySelectorAll('.page')
+.forEach(p=>p.classList.remove('show'));
+document.getElementById(id).classList.add('show');
+}
+
+function ending(){
+go('ending');
+typeText("You reached the end… but this is just our beginning ❤️");
+
+for(let i=0;i<40;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),3000);
+}
+}
+
+function typeText(text){
+let i=0;
+let el=document.getElementById("endText");
+el.innerHTML="";
+let interval=setInterval(()=>{
+el.innerHTML+=text.charAt(i);
+i++;
+if(i>=text.length) clearInterval(interval);
+},60);
+}
+</script>
+
+</body>
+</html>
